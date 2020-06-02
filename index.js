@@ -1,12 +1,14 @@
 const express = require('express');
-const bodyparser = require('body-parser');
 
-const postRoutes = require('./routes/postRoutes');
+const cors = require('cors');
+
+const postRoutes = require('./routers/postRoutes');
 
 const app = express();
-app.use(bodyparser.json())
-app.use('/api/posts', postRoutes);
+app.use(express.json())
+app.use(cors());
 
+app.use('/api/posts', postRoutes);
 
 app.use('/', (req, res) => res.send('Up and running'));
 

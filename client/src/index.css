@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+}
+
+.post {
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 2% auto;
+  width: 50%;
+  text-align: center;
+}
